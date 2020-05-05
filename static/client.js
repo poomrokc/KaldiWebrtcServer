@@ -49,7 +49,7 @@ function negotiate() {
     }).then(function () {
         var offer = pc.localDescription;
         console.log(offer.sdp);
-        return fetch('/offer', {
+        return fetch('/asr/offer', {
             body: JSON.stringify({
                 sdp: offer.sdp,
                 type: offer.type,
